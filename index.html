@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/style.css">
+      <title>Email Builder</title>
+   </head>
+   <body>
+      <div class="editPanel">
+         <div class="accordion" id="accordionExample">
+            <div class="card">
+               <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                     VERTICAL SPACE
+                     </button>
+                     <button class="btn btn-link float-right" onclick="vSpace()" id="vSpace_btn">ADD</button>
+                  </h5>
+               </div>
+               <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body" id="spacing_block">
+                     <input type="number" name="Space" class="inputStyle" id="spacerInput" >
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                     MAIN HEADING
+                     </button>
+                     <button class="btn btn-link float-right" onclick="txtBlock()">ADD</button>
+                  </h5>
+               </div>
+               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                     <div class="row padTopBottom">
+                        <textarea id="txtInput" class="textarea"></textarea>
+                     </div>
+                     <div class="row padTopBottom">
+                        <input type="number" placeholder="Font Size" id="fSize1" class="col-12"  />
+                     </div>
+                     <div class="row padTopBottom space_between">
+                        <input type="text" class="col-10" id="hex">
+                        <input type="color" id="color">
+                     </div>   
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="false" aria-controls="collapseTwo">
+                     SUB HEADING
+                     </button>
+                     <button class="btn btn-link float-right" onclick="subTxtBlock()">ADD</button>
+                  </h5>
+               </div>
+               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                     <!-- <textarea id="txtInput"></textarea> -->
+                  </div>
+               </div>
+            </div>            
+            <div class="card">
+               <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                     CTA
+                     </button>
+                     <button class="btn btn-link float-right" onclick="ctaBlock()">ADD</button>
+                  </h5>
+               </div>
+               <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                  <div class="card-body">
+                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                     moon officia aute, non cupidatat skateboard dolor brunch.
+                  </div>
+               </div>
+            </div>
+
+            <div class="card">
+               <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        IMAGE
+                     </button>
+                     <button class="btn btn-link float-right" onclick="imgBlock()">ADD</button>
+                  </h5>
+               </div>
+               <!-- <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                  <div class="card-body">
+                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                     moon officia aute, non cupidatat skateboard dolor brunch.
+                  </div>
+               </div> -->
+            </div>
+
+         </div>
+      </div>
+      <!-- editPanel end  -->
+      <div class="row">
+         <div class="col-sm-8">
+            <div class="emailPanel">
+               <!--[if mso]>
+               <style type="text/css">
+                  body, table, td , span, b{font-family:Arial, Helvetica, sans-serif !important;}
+               </style>
+               <![endif]-->
+               <!-- <style type="text/css">
+                  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+                  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+                  @media all and (max-width: 630px) {
+                  * {
+                  -webkit-text-size-adjust: 100%;
+                  }
+                  table {
+                  width: 100% !important
+                  }
+                  .bgPic { width: 100% !important;height: auto !important
+                  }
+                  .topSize {
+                  font-size: 32px !important;
+                  line-height: 36px !important;
+                  }
+                  .topSize2 {
+                  font-size: 17px !important;
+                  line-height: 24px !important;
+                  }
+                  .cta {
+                  font-size: 16px !important;
+                  line-height: 21px !important;
+                  width: 185px !important;
+                  padding-left: 15px !important;
+                  }
+                  .botCTA {
+                  width: 232px !important
+                  }
+                  .extSpace {
+                  height: 25px !important
+                  }
+                  .spons {
+                  font-size: 12px !important
+                  }
+                  .changeHeight {
+                  height: 56px !important
+                  }
+                  .reduceHeight {
+                  height: 14px !important
+                  }
+                  .arrowImage {
+                  padding: 6px 0 !important;
+                  height: auto !important;
+                  width: 10px !important;
+                  }
+                  .gmail {
+                  width: 0 !important;
+                  display: none !important;
+                  }
+                  .brNone {
+                  display: none
+                  }
+                  }
+                  a {
+                  text-decoration: none;
+                  border: none;
+                  outline: none;
+                  }
+               </style> -->
+
+               <table cellpadding="0" cellspacing="0" border="0" align="center" width="100%" style="font-family: Arial, Helvetica, sans-serif">
+                  <tr>
+                     <td align="center" bgcolor="#ffffff">
+                        <table cellpadding="0" cellspacing="0" border="0" width="600" align="center">
+                           <tr>
+                              <td align="center" style="border:1px solid #e1e1e1;" bgcolor="#ffffff">
+                                 <table cellspacing="0" cellpadding="0" border="0" width="598" align="center" id="tableBlock">
+                                    <!--[if gte mso 10]> <style type="text/css"> .bottomSpace{height:35px !important} .cta1{font-size:22px !important} .cta{font-size:18px !important} .spons{font-size:12px !important}  .supHeader{font-size:13px !important} </style><![endif]-->
+                              
+
+
+
+
+
+
+
+                                 </table>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </table>
+               <table border="0" cellpadding="0" cellspacing="0" class="gmail"><tr> <td style="min-width:600px;" ><span>&nbsp; &nbsp;</span></td> </tr></table>
+
+
+
+
+
+
+            </div>
+         </div>
+      </div>
+      <style type="text/css">
+         .editPanel {
+         position: absolute;
+         right: 0;
+         top: 0;
+         width: 350px;
+         z-index: 1;
+         height: 100vh;
+         background: #dadada
+         }
+         .inputStyle {
+         width: 100%;
+         border: none;
+         border-bottom: 1px solid #bfb9b9;
+         }
+      </style>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+      <script src="js/main.js"></script>
+      <!-- <script src="js/jscolor.min.js"></script> -->
+  
+   </body>
+</html>
