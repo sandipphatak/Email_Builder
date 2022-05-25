@@ -26,15 +26,6 @@ function get_vSpace_id(clicked_id){
     let vSpaceShow = document.getElementById("collapseOne");
     vSpaceShow.classList.add("show") ;
 
-    // Live edit
-    // const live_edit = `
-    // <div class="active-container">
-    //     <div class="active_effect"></div>
-    //     <div class="circle"></div>
-    // </div>`;
-    // let edit_effect = document.getElementById(lastUsed);
-    // edit_effect.insertAdjacentHTML('beforeend', live_edit);
-
     // Height Change
     let spaceInput = document.getElementById("spacerInput");
     spaceInput.addEventListener('input', () => {
@@ -73,65 +64,6 @@ function get_mHead_id(clicked_id_head){
     let headTxtShow = document.getElementById("collapseTwo");
     headTxtShow.classList.add("show") ;
 
-    // Live edit 
-        // let check_ele = document.querySelector('active-container');
-
-        // // var dd = document.body.contains(document.querySelector('active-container'));
-        // // dd.remove;
-
-        // function myFunction() {
-        //     const list = document.getElementById(prevClickedHead);
-        //     console.log(lastUsedHead + " Hi");
-
-        //     if (list.hasChildNodes()) {
-        //       list.removeChild(list.children);
-        //     }
-        //   }
-
-        //   myFunction();
-
-        // const live_edit_Head = `
-        // <div class="active-container">
-        //     <div class="active_effect"></div>
-        //     <div class="circle"></div>
-        // </div>`;
-        // let edit_effectHead = document.getElementById(lastUsedHead);
-        // edit_effectHead.insertAdjacentHTML('beforeend', live_edit_Head);   
-
-
-        //     //If it isn't "undefined" and it isn't "null", then it exists.
-        // // if(typeof(dd) != 'undefined' && dd != null){
-        // //     alert('Element exists');
-        // //     dd.remove();
-        // // } else{
-        // //     alert('Element does not exist');
-        // //     const live_edit_Head = `
-        // //     <div class="active-container">
-        // //         <div class="active_effect"></div>
-        // //         <div class="circle"></div>
-        // //     </div>`;
-        // //     let edit_effectHead = document.getElementById(lastUsedHead);
-        // //     edit_effectHead.insertAdjacentHTML('beforeend', live_edit_Head);            
-        // // }
-
-
-        // // if(document.body.contains(document.querySelector('active-container'))){
-        // //     alert('Element exists!');
-        // // } else{
-        // //     alert('Element does not exist!');
-        // //     // Live edit
-        // //     const live_edit_Head = `
-        // //     <div class="active-container">
-        // //         <div class="active_effect"></div>
-        // //         <div class="circle"></div>
-        // //     </div>`;
-        // //     let edit_effectHead = document.getElementById(lastUsedHead);
-        // //     edit_effectHead.insertAdjacentHTML('beforeend', live_edit_Head);
-        // // }
-        
-
-    // Live edit end
-
     let headTxtInput = document.getElementById("txtInput");
     headTxtInput.addEventListener('input', () => {
         let headTxt = document.getElementById(lastUsedHead);
@@ -152,13 +84,11 @@ function get_mHead_id(clicked_id_head){
         document.getElementById(lastUsedHead).style.color = color;
     });
 
-
 }
 
 // Main Head end
 
 // Sub Text 
-
 function subTxtBlock() {
     let subTextAppend = `<tr>
                 <td align="center" valign="middle">
@@ -168,7 +98,6 @@ function subTxtBlock() {
     let currentSubTextHTML = tableConatiner.getInnerHTML();
     tableConatiner.innerHTML = currentSubTextHTML + subTextAppend;
 }
-
 // Sub Text end
 
 // CTA  
