@@ -16,6 +16,7 @@ function vSpace() {
 
 }
 
+
 let lastUsed = null;
 function get_vSpace_id(clicked_id){
     prevClicked = lastUsed;
